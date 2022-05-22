@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import Polaroid from "../../common/Polaroid";
 
 export default function Home() {
-  const [vh, setVh] = useState("100vh");
+  const [vh, setVh] = useState("");
 
   useEffect(() => {
     const changeVh = () => {
