@@ -39,7 +39,7 @@ main {
 p,
 li {
   color: var(--color-paragpraph);
-  font-size: 12px;
+  font-size: 14px;
 }
 
 button {

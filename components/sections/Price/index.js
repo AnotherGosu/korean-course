@@ -7,13 +7,11 @@ export default function Price() {
   return (
     <Section heading="Стоимость курса">
       <div className={styles.container}>
-        <div className={styles.subsectionTop}>
-          <div className={styles.image} />
-          <span className={styles.value}>3$</span>
-        </div>
+        <div className={styles.image} />
+        <span className={styles.value}>3$</span>
         <div className={styles.text}>
-          <span>1 урок = 1 чашка кофе</span>
-          <span>Кофе закочится, знания остануться</span>
+          <p>1 урок = 1 чашка кофе</p>
+          <p>Кофе закочится, знания остануться</p>
         </div>
       </div>
     </Section>

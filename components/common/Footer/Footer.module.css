@@ -10,11 +10,11 @@
 
 .title {
   font-family: "Dancing Script", cursive;
-  font-size: 20px;
+  font-size: 30px;
   color: var(--color-headline);
 }
 
 .link {
   text-decoration: underline;
-  font-size: 10px;
+  font-size: 12px;
 }

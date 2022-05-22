@@ -1,12 +1,12 @@
 import styles from "./Home.module.css";
 import Image from "next/image";
 
-import Section from "../../common/Section";
+import Polaroid from "../../common/Polaroid";
 
 export default function Home() {
   return (
     <section className={styles.container}>
-      <div className={styles.polaroid}>
+      <Polaroid>
         <Image
           src="/polaroid.jpg"
           alt="Мари"
@@ -15,17 +15,13 @@ export default function Home() {
           layout="intrinsic"
         />
         <span className={styles.title}>Maryoonseul</span>
-      </div>
+      </Polaroid>
       <h1 className={styles.heading}>
-        <span>Авторский Курс</span>
-        <Image
-          src="/flag.png"
-          alt="Корейский флаг"
-          width="40"
-          height="40"
-          layout="intrinsic"
-        />
-        <span>Корейского Языка</span>
+        <div className={styles.icon} />
+        <span>
+          Авторский Курс <br />
+          Корейского Языка
+        </span>
       </h1>
     </section>
   );

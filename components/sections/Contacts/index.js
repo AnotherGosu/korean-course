@@ -35,5 +35,5 @@ export default function Contacts() {
 const links = [
   { image: "/instagram.svg", url: "https://www.instagram.com/maryoonseul/" },
   { image: "/telegram.svg", url: "https://t.me/+VqW2TIN42rewekrP" },
-  { image: "/vk.svg", url: "https://www.instagram.com/maryoonseul/" },
+  { image: "/vk.svg", url: "https://vk.com/" },
 ];

@@ -1,20 +1,14 @@
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
   width: 100%;
 }
 
-.subsectionTop {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  align-items: center;
-  text-align: center;
-}
-
 .image {
   width: 100%;
-  height: 150px;
+  height: 200px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -23,14 +17,10 @@
 
 .value {
   font-family: "Dancing Script", cursive;
-  font-size: 40px;
+  font-size: 45px;
 }
 
 .text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  font-size: 12px;
+  line-height: 1.8;
   text-align: center;
 }

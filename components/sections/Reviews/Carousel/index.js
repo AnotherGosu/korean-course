@@ -8,7 +8,7 @@ export default function Carousel({ reviews = [], currentImage = 1 }) {
         <div
           key={url}
           className={styles.image}
-          style={{ right: `${200 * (currentImage - idx)}px` }}
+          style={{ right: `${220 * (currentImage - idx)}px` }}
         >
           <Image src={url} alt="Отзыв" layout="fill" objectFit="contain" />
         </div>
