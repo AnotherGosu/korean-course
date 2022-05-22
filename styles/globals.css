@@ -16,7 +16,6 @@ html,
 body {
   font-family: "Playfair Display", serif;
   background-color: var(--color-background);
-  height: -webkit-fill-available;
 }
 
 a {

@@ -1,11 +1,20 @@
 import styles from "./Home.module.css";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 import Polaroid from "../../common/Polaroid";
 
 export default function Home() {
+  const [windowHeight, setWindowHeight] = useState("100vh");
+
+  useEffect(() => {
+    if (window) {
+      setWindowHeight(`${window.innerHeight}px`);
+    }
+  }, []);
+
   return (
-    <section className={styles.container}>
+    <section className={styles.container} style={{ height: windowHeight }}>
       <Polaroid>
         <Image
           src="/polaroid.jpg"
