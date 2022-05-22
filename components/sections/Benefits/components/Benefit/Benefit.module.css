@@ -28,11 +28,6 @@
   align-self: flex-end;
 }
 
-.heading {
-  font-size: 18px;
-  font-weight: 600;
-}
-
 .text {
   line-height: 1.6;
 }

@@ -8,7 +8,7 @@ export default function Audience() {
       <div className={styles.container}>
         <div className={styles.level}>
           <div className={`${styles.image} ${styles.imageBeginner}`} />
-          <h3 className={styles.heading}>Для начального уровня</h3>
+          <h3>Для начального уровня</h3>
           <p>
             За 1 урок научитесь читать и писать на корейском.
             <br />
@@ -17,7 +17,7 @@ export default function Audience() {
         </div>
         <div className={styles.level}>
           <div className={`${styles.image} ${styles.imageIntermidiate}`} />
-          <h3 className={styles.heading}>Для среднего уровня</h3>
+          <h3>Для среднего уровня</h3>
           <p>
             Повысите уровень своих знаний и навыков.
             <br />

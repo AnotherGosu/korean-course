@@ -4,7 +4,7 @@ export default function Benefit({ image, heading, text, isAlignEnd }) {
   return isAlignEnd ? (
     <div className={styles.containerAlignEnd}>
       <div className={styles.headerAlignEnd}>
-        <h3 className={styles.heading}>{heading}</h3>
+        <h3>{heading}</h3>
         <div
           className={styles.icon}
           style={{ backgroundImage: `url(${image})` }}
@@ -20,7 +20,7 @@ export default function Benefit({ image, heading, text, isAlignEnd }) {
           style={{ backgroundImage: `url(${image})` }}
         />
 
-        <h3 className={styles.heading}>{heading}</h3>
+        <h3>{heading}</h3>
       </div>
       <p className={styles.text}>{text}</p>
     </div>
