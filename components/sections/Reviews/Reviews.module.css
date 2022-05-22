@@ -1,0 +1,34 @@
+.container {
+  display: grid;
+  grid-template-columns: 30px 1fr 30px;
+  margin: auto;
+}
+
+.arrowContainer {
+  position: relative;
+}
+
+.arrowLeft,
+.arrowRight {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border-top: 2px solid var(--color-paragpraph);
+}
+
+.arrowLeft {
+  transform: translate(-50%, -50%) rotate(-45deg);
+  border-left: 2px solid var(--color-paragpraph);
+}
+
+.arrowRight {
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-right: 2px solid var(--color-paragpraph);
+}
+
+.arrowLeft:disabled,
+.arrowRight:disabled {
+  opacity: 0.5;
+}

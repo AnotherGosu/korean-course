@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+
+  background-color: var(--color-secondary);
+}
+
+.heading {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+}

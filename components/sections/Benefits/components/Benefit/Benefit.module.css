@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 210px;
+}
+
+.containerAlignEnd {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 210px;
+  align-self: flex-end;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.heading {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.headerAlignEnd {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  align-self: flex-end;
+}
+
+.text {
+  font-size: 12px;
+  color: var(--color-paragraph);
+  line-height: 1.6;
+}

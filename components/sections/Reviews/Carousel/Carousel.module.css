@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  gap: 50px;
+  width: 200px;
+  height: 355px;
+  position: relative;
+  overflow: hidden;
+}
+
+.image {
+  position: absolute;
+  width: 200px;
+  height: 355px;
+  transition: 0.8s ease;
+}
