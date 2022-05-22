@@ -5,16 +5,22 @@ import { useState, useEffect } from "react";
 import Polaroid from "../../common/Polaroid";
 
 export default function Home() {
-  const [windowHeight, setWindowHeight] = useState("100vh");
+  const [vh, setVh] = useState("100vh");
 
   useEffect(() => {
-    if (window) {
-      setWindowHeight(`${window.innerHeight}px`);
-    }
+    const changeVh = () => {
+      if (window) {
+        const innerVh = window.innerHeight * 0.01;
+        setVh(`${innerVh}px`);
+      }
+    };
+
+    window.addEventListener("resize", changeVh);
+    return () => window.removeEventListener("resize", changeVh);
   }, []);
 
   return (
-    <section className={styles.container} style={{ height: windowHeight }}>
+    <section className={styles.container} style={{ "--vh": vh }}>
       <Polaroid>
         <Image
           src="/polaroid.jpg"
