@@ -1,9 +1,10 @@
-import Heading from "../Heading";
-import styles from "./Section.module.css";
+import styles from "./Section.module.scss";
 
-export default function Section({ children, heading = "" }) {
+import Heading from "components/common/Heading";
+
+export default function Section({ children, heading = "", id }) {
   return (
-    <section>
+    <section id={id}>
       {heading && <Heading text={heading} />}
       <div className={styles.container}>{children}</div>
     </section>

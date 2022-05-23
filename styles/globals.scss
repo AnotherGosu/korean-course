@@ -1,9 +1,11 @@
 :root {
   --color-background: #faeee7;
-  --color-paragpraph: #594a4e;
+  --color-paragraph: #594a4e;
   --color-headline: #33272a;
   --color-highlight: #ff8ba7;
   --color-secondary: #ffc6c7;
+  --color-tertiary: #c3f0ca;
+  --color-main: #fffffe;
 }
 
 * {
@@ -15,7 +17,11 @@
 html,
 body {
   font-family: "Playfair Display", serif;
-  background-color: var(--color-background);
+  background-color: #fffffe;
+  background-image: radial-gradient(#ff8ba7 2px, transparent 2px),
+    radial-gradient(#ff8ba7 2px, #fffffe 2px);
+  background-size: 80px 80px;
+  background-position: 0 0, 40px 40px;
 }
 
 main {
@@ -32,17 +38,22 @@ h5 {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 36px;
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 28px;
+}
+
+ul {
+  list-style: none;
 }
 
 p,
 li {
-  color: var(--color-paragpraph);
-  font-size: 16px;
+  color: var(--color-paragraph);
+  font-size: 22px;
+  font-weight: 500;
 }
 
 a {

@@ -1,8 +1,8 @@
-import styles from "./Home.module.css";
+import styles from "./Home.module.scss";
 import { useWindowSize } from "hooks";
 import Image from "next/image";
 
-import Polaroid from "../../common/Polaroid";
+import Polaroid from "components/common/Polaroid";
 
 export default function Home() {
   const { width } = useWindowSize();

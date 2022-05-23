@@ -1,15 +1,15 @@
-import styles from "./Benefits.module.css";
+import styles from "./Benefits.module.scss";
 
-import Section from "../../common/Section";
+import Section from "components/common/Section";
 
-import Benefit from "./components/Benefit";
+import Card from "components/common/Card";
 
 export default function Benefits() {
   return (
-    <Section heading="Особенности курса">
+    <Section heading="Особенности курса" id="benefits">
       <div className={styles.container}>
         {benefits.map((props) => (
-          <Benefit key={props.heading} {...props} />
+          <Card key={props.heading} {...props} />
         ))}
       </div>
     </Section>
@@ -26,7 +26,6 @@ const benefits = [
     image: "/emblem.png",
     heading: "Качество",
     text: "Курс основан на программе учебников лучших университетов Южной Кореи: Yonsei, Ewha, Hankuk. Подробно рассмотрены грамматики начального и среднего уровня",
-    isAlignEnd: true,
   },
   {
     image: "/gimbap.png",

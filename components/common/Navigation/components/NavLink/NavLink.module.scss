@@ -1,0 +1,26 @@
+.link {
+  padding: 10px 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: var(--color-secondary);
+  font-size: 16px;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  color: var(--color-headline);
+  cursor: pointer;
+  transition: 0.4s ease;
+
+  &:hover {
+    background-color: var(--color-highlight);
+    box-shadow: 1px 4px 4px var(--color-secondary);
+  }
+}
+
+.divider {
+  width: 1px;
+  height: 20px;
+  background-color: var(--color-paragraph);
+}

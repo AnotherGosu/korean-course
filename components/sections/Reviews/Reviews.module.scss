@@ -17,20 +17,20 @@
   left: 50%;
   width: 20px;
   height: 20px;
-  border-top: 2px solid var(--color-paragpraph);
+  border-top: 2px solid var(--color-paragraph);
 }
 
 .arrowLeft {
   transform: translate(-50%, -50%) rotate(-45deg);
-  border-left: 2px solid var(--color-paragpraph);
+  border-left: 2px solid var(--color-paragraph);
 }
 
 .arrowRight {
   transform: translate(-50%, -50%) rotate(45deg);
-  border-right: 2px solid var(--color-paragpraph);
+  border-right: 2px solid var(--color-paragraph);
 }
 
 .arrowLeft:disabled,
 .arrowRight:disabled {
-  opacity: 0.5;
+  opacity: 0.3;
 }

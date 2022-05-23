@@ -1,30 +1,29 @@
-import styles from "./Audience.module.css";
+import styles from "./Audience.module.scss";
 
-import Section from "../../common/Section";
+import Section from "components/common/Section";
+import Card from "components/common/Card";
 
 export default function Audience() {
   return (
-    <Section heading="Для кого этот курс">
+    <Section heading="Для кого этот курс" id="audience">
       <div className={styles.container}>
-        <div className={styles.level}>
-          <div className={`${styles.image} ${styles.imageBeginner}`} />
-          <h3>Для начального уровня</h3>
-          <p>
-            За 1 урок научитесь читать и писать на корейском.
-            <br />
-            За неделю сможете уже составлять предложения
-          </p>
-        </div>
-        <div className={styles.level}>
-          <div className={`${styles.image} ${styles.imageIntermidiate}`} />
-          <h3>Для среднего уровня</h3>
-          <p>
-            Повысите уровень своих знаний и навыков.
-            <br />
-            Узнаете много новых грамматик и слов
-          </p>
-        </div>
+        {levels.map((level) => (
+          <Card key={level.heading} {...level} />
+        ))}
       </div>
     </Section>
   );
 }
+
+const levels = [
+  {
+    image: "/beginner.png",
+    heading: "Для начального уровня",
+    text: "За 1 урок научитесь читать и писать на корейском. За неделю сможете уже составлять предложения",
+  },
+  {
+    image: "/intermidiate.png",
+    heading: "Для среднего уровня",
+    text: "Повысите уровень своих знаний и навыков. Узнаете много новых грамматик и слов",
+  },
+];

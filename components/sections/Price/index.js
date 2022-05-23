@@ -1,15 +1,14 @@
-import styles from "./Price.module.css";
-import Image from "next/image";
+import styles from "./Price.module.scss";
 
-import Section from "../../common/Section";
+import Section from "components/common/Section";
 
 export default function Price() {
   return (
-    <Section heading="Стоимость курса">
+    <Section heading="Стоимость курса" id="price">
       <div className={styles.container}>
         <div className={styles.image} />
-        <span className={styles.value}>3$</span>
         <div className={styles.text}>
+          <span className={styles.value}>3$</span>
           <p>1 урок = 1 чашка кофе</p>
           <p>Кофе закочится, знания остануться</p>
         </div>

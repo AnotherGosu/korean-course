@@ -1,21 +1,25 @@
-import styles from "./Included.module.css";
+import styles from "./Included.module.scss";
 
-import Section from "../../common/Section";
+import Section from "components/common/Section";
+
+import List from "components/common/List";
 
 export default function Included() {
   return (
-    <Section heading="Что включено в курс">
+    <Section heading="Что включено в курс" id="included">
       <div className={styles.container}>
-        <ul className={styles.list}>
-          <li>программа обучения</li>
-          <li>постоянный доступ к материалам</li>
-          <li>оперативная обратная связь</li>
-          <li>видеозаписи всех уроков</li>
-          <li>полный словарь базовых фраз</li>
-          <li>подборка материалов для практики вне урока</li>
-        </ul>
+        <List items={includedItems} style={{ gap: "25px" }} />
         <div className={styles.image} />
       </div>
     </Section>
   );
 }
+
+const includedItems = [
+  "Программа обучения",
+  "Постоянный доступ к материалам",
+  "Оперативная обратная связь",
+  "Видеозаписи всех уроков",
+  "Полный словарь базовых фраз",
+  "Подборка материалов для практики вне урока",
+];

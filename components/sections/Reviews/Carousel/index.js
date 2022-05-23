@@ -1,4 +1,4 @@
-import styles from "./Carousel.module.css";
+import styles from "./Carousel.module.scss";
 import Image from "next/image";
 
 export default function Carousel({ reviews = [], currentImage = 1 }) {
@@ -8,7 +8,7 @@ export default function Carousel({ reviews = [], currentImage = 1 }) {
         <div
           key={url}
           className={styles.image}
-          style={{ right: `${220 * (currentImage - idx)}px` }}
+          style={{ right: `${500 * (currentImage - idx)}px` }}
         >
           <Image src={url} alt="Отзыв" layout="fill" objectFit="contain" />
         </div>

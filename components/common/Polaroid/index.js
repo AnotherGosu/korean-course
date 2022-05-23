@@ -1,4 +1,4 @@
-import styles from "./Polaroid.module.css";
+import styles from "./Polaroid.module.scss";
 
 export default function Polaroid({ children, style }) {
   return (

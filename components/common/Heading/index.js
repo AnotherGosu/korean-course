@@ -1,4 +1,4 @@
-import styles from "./Heading.module.css";
+import styles from "./Heading.module.scss";
 
 export default function Heading({ text = "" }) {
   return (

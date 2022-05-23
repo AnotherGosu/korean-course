@@ -1,15 +1,15 @@
 .container {
+  width: 500px;
+  height: 700px;
   display: flex;
   gap: 50px;
-  width: 220px;
-  height: 391px;
   position: relative;
   overflow: hidden;
 }
 
 .image {
   position: absolute;
-  width: 220px;
-  height: 391px;
+  width: 500px;
+  height: 700px;
   transition: 0.8s ease;
 }

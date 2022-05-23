@@ -1,7 +1,7 @@
-import styles from "./Reviews.module.css";
+import styles from "./Reviews.module.scss";
 import { useState } from "react";
 
-import Section from "../../common/Section";
+import Section from "components/common/Section";
 
 import Carousel from "./Carousel";
 
@@ -17,7 +17,7 @@ export default function Reviews() {
   };
 
   return (
-    <Section heading="Отзывы">
+    <Section heading="Отзывы" id="reviews">
       <div className={styles.container}>
         <div className={styles.arrowContainer}>
           <button
