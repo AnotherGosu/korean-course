@@ -6,7 +6,6 @@ export default function Contacts() {
   return (
     <Section heading="Остались вопросы?" id="contacts">
       <div className={styles.container}>
-        <div className={styles.image} />
         <div className={styles.links}>
           <p>Обязательно свяжись со мной</p>
           <ul className={styles.list}>
@@ -27,6 +26,7 @@ export default function Contacts() {
             ))}
           </ul>
         </div>
+        <div className={styles.image} />
       </div>
     </Section>
   );

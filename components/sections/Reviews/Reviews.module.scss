@@ -1,6 +1,19 @@
+@mixin arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border-top: 2px solid var(--color-paragraph);
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}
+
 .container {
   display: grid;
-  grid-template-columns: 30px 1fr 30px;
+  grid-template-columns: 70px 1fr 70px;
   justify-items: center;
   margin: auto;
   width: 100%;
@@ -10,27 +23,14 @@
   position: relative;
 }
 
-.arrowLeft,
-.arrowRight {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  border-top: 2px solid var(--color-paragraph);
-}
-
 .arrowLeft {
+  @include arrow;
   transform: translate(-50%, -50%) rotate(-45deg);
   border-left: 2px solid var(--color-paragraph);
 }
 
 .arrowRight {
+  @include arrow;
   transform: translate(-50%, -50%) rotate(45deg);
   border-right: 2px solid var(--color-paragraph);
-}
-
-.arrowLeft:disabled,
-.arrowRight:disabled {
-  opacity: 0.3;
 }

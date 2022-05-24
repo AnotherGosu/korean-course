@@ -1,14 +1,19 @@
 import styles from "./Navigation.module.scss";
+import { useShowOnScroll } from "hooks";
 
 import NavLink from "./components/NavLink";
 
 export default function Navigation() {
+  const isVisible = useShowOnScroll();
+
   return (
-    <nav className={styles.container}>
-      {navLinks.map((link) => (
-        <NavLink key={link.navLinkId} {...link} />
-      ))}
-    </nav>
+    isVisible && (
+      <nav className={styles.container}>
+        {navLinks.map((link) => (
+          <NavLink key={link.navLinkId} {...link} />
+        ))}
+      </nav>
+    )
   );
 }
 

@@ -6,28 +6,15 @@
   flex-direction: column;
   align-items: center;
   gap: 5px;
+  animation: slideUp 0.7s;
 }
 
-.button {
-  padding: 10px 10px;
-  width: 100%;
-  background-color: var(--color-secondary);
-  border-radius: 20px;
-  font-size: 14px;
-  font-family: "Playfair Display", serif;
-  font-weight: 500;
-  color: var(--color-headline);
-  cursor: pointer;
-  transition: 0.4s ease;
-
-  &:hover {
-    background-color: var(--color-highlight);
-    box-shadow: 1px 4px 4px var(--color-secondary);
+@keyframes slideUp {
+  0% {
+    opacity: 0;
   }
-}
 
-.divider {
-  width: 1px;
-  height: 20px;
-  background-color: var(--color-paragraph);
+  100% {
+    opacity: 1;
+  }
 }
