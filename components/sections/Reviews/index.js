@@ -1,9 +1,9 @@
 import styles from "./Reviews.module.scss";
 import { useState } from "react";
+import Image from "next/image";
 
 import Section from "components/common/Section";
-
-import Carousel from "./Carousel";
+import Polaroid from "components/common/Polaroid";
 
 export default function Reviews() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -19,21 +19,33 @@ export default function Reviews() {
   return (
     <Section heading="Отзывы" id="reviews">
       <div className={styles.container}>
-        <div className={styles.arrowContainer}>
-          <button
-            className={styles.arrowLeft}
-            onClick={onPrevImage}
-            disabled={currentImage === 0}
-          />
+        <button
+          className={styles.arrowLeft}
+          onClick={onPrevImage}
+          disabled={currentImage === 0}
+        />
+        <div className={styles.imageWrapper}>
+          {reviews.map((url, idx) => (
+            <div
+              key={url}
+              className={styles.image}
+              style={{ right: `${500 * (currentImage - idx)}px` }}
+            >
+              <Image
+                src={url}
+                alt={`Отзыв-${idx + 1}`}
+                layout="fill"
+                objectFit="cover"
+                objectPosition="center"
+              />
+            </div>
+          ))}
         </div>
-        <Carousel currentImage={currentImage} reviews={reviews} />
-        <div className={styles.arrowContainer}>
-          <button
-            className={styles.arrowRight}
-            onClick={onNextImage}
-            disabled={currentImage === REVIEWS_COUNT - 1}
-          />
-        </div>
+        <button
+          className={styles.arrowRight}
+          onClick={onNextImage}
+          disabled={currentImage === REVIEWS_COUNT - 1}
+        />
       </div>
     </Section>
   );
@@ -41,6 +53,13 @@ export default function Reviews() {
 
 const reviews = [
   "/review-1.jpg",
+  // {
+  //   userName: "ilysmbjy",
+  //   text: `Хочу поблагодарить вас за этот прекрасный курс, где все очень доступно и понятно.
+  //   До курса я уже знала кое-какие правила, но очень была рада все повторить и освежить свою голову!
+  //   Благодаря Вашему курсу мой уровень знаний по корейскому улучшился, за что Вам благодарна.
+  //   Ещё классно то, что материалы остаются у нас в открытом доступе`,
+  // },
   "/review-2.jpg",
   "/review-3.jpg",
   "/review-4.jpg",

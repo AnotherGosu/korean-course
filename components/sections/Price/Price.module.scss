@@ -1,24 +1,39 @@
+@import "styles/breakpoints.scss";
+
 .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
   width: 100%;
+
+  @include sm {
+    flex-direction: column;
+  }
 }
 
 .image {
-  width: 350px;
+  width: 100%;
+  max-width: 350px;
   height: 250px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   background-image: url("/coffee.svg");
+
+  @include bg {
+    height: 200px;
+  }
 }
 
 .value {
   font-family: "Dancing Script", cursive;
   font-size: 90px;
   color: var(--color-headline);
+
+  @include bg {
+    font-size: 60px;
+  }
 }
 
 .text {

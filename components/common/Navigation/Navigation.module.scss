@@ -9,6 +9,13 @@
   animation: slideUp 0.7s;
 }
 
+.modalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
 @keyframes slideUp {
   0% {
     opacity: 0;

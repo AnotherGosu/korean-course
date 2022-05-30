@@ -1,3 +1,5 @@
+@import "styles/breakpoints.scss";
+
 .container {
   width: 100%;
   display: flex;
@@ -13,6 +15,10 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url("/loving.svg");
+
+  @include bg {
+    height: 200px;
+  }
 }
 
 .links {
@@ -49,4 +55,9 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+
+  @include bg {
+    width: 55px;
+    height: 55px;
+  }
 }

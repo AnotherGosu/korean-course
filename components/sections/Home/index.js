@@ -7,7 +7,7 @@ import Polaroid from "components/common/Polaroid";
 export default function Home() {
   const { width } = useWindowSize();
 
-  const isTablet = width > 500;
+  const isMobile = width < 620;
 
   return (
     <section className={styles.container}>
@@ -25,13 +25,13 @@ export default function Home() {
       </div>
       <h1 className={styles.heading}>
         <div className={styles.icon} />
-        {isTablet ? (
-          <span>Авторский Курс Корейского Языка</span>
-        ) : (
+        {isMobile ? (
           <span>
             Авторский Курс <br />
             Корейского Языка
           </span>
+        ) : (
+          <span>Авторский Курс Корейского Языка</span>
         )}
       </h1>
     </section>

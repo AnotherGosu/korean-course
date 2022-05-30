@@ -1,9 +1,15 @@
+@import "styles/breakpoints.scss";
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
   background-color: var(--color-secondary);
+
+  @include bg {
+    padding: 10px;
+  }
 }
 
 .heading {

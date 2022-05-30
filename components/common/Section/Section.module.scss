@@ -1,3 +1,13 @@
+@import "styles/breakpoints.scss";
+
 .container {
-  padding: 70px 50px 70px 50px;
+  padding: 70px 50px;
+
+  @include bg {
+    padding: 50px 30px;
+  }
+
+  @include sm {
+    padding: 30px 15px;
+  }
 }

@@ -1,13 +1,21 @@
+@import "styles/breakpoints.scss";
+
 .container {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 50px;
 }
 
 .subsectionTop {
   display: grid;
-  grid-template-columns: 325px 1fr;
+  grid-template-columns: 275px 1fr;
   gap: 20px;
+
+  @include sm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 .imageTop,
@@ -16,6 +24,10 @@
   height: 250px;
   background-repeat: no-repeat;
   background-size: contain;
+
+  @include bg {
+    height: 200px;
+  }
 }
 
 .imageTop {

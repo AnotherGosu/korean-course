@@ -1,14 +1,31 @@
+@import "styles/breakpoints.scss";
+
+.appContainer {
+  position: relative;
+}
+
 .contentWrapper {
   display: grid;
   grid-template-columns: 1fr 900px 1fr;
+
+  @include bg {
+    grid-template-columns: 1fr 650px 1fr;
+  }
+
+  @include md {
+    grid-template-columns: 1fr;
+  }
 }
 
 .main {
-  position: relative;
   background-color: var(--color-background);
 }
 
 .navWrapper {
   position: relative;
-  padding: 0 100px;
+  padding: 5vw;
+
+  @include bg {
+    display: none;
+  }
 }

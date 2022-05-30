@@ -3,6 +3,7 @@ import Head from "next/head";
 
 import Footer from "components/common/Footer";
 import Navigation from "components/common/Navigation";
+import ModalMenu from "components/common/ModalMenu/ModalMenu";
 
 import Home from "components/sections/Home";
 import Reason from "components/sections/Reason";
@@ -22,23 +23,26 @@ export default function App() {
         <meta name="description" content="Korean language course" />
         <link rel="icon" href="/flag.png" />
       </Head>
+      <div className={styles.appContainer}>
+        <ModalMenu />
 
-      <div className={styles.contentWrapper}>
-        <div />
-        <main className={styles.main}>
-          <Home />
-          <Reason />
-          <Benefits />
-          <Included />
-          <Audience />
-          <Price />
-          <Join />
-          <Reviews />
-          <Contacts />
-          <Footer />
-        </main>
-        <div className={styles.navWrapper}>
-          <Navigation />
+        <div className={styles.contentWrapper}>
+          <div className={styles.spacer} />
+          <main className={styles.main}>
+            <Home />
+            <Reason />
+            <Benefits />
+            <Included />
+            <Audience />
+            <Price />
+            <Join />
+            <Reviews />
+            <Contacts />
+            <Footer />
+          </main>
+          <div className={styles.navWrapper}>
+            <Navigation />
+          </div>
         </div>
       </div>
     </>

@@ -3,8 +3,18 @@ import { useShowOnScroll } from "hooks";
 
 import NavLink from "./components/NavLink";
 
-export default function Navigation() {
+export default function Navigation({ isModal }) {
   const isVisible = useShowOnScroll();
+
+  if (isModal) {
+    return (
+      <nav className={styles.modalContainer}>
+        {navLinks.map((link) => (
+          <NavLink key={link.navLinkId} {...link} />
+        ))}
+      </nav>
+    );
+  }
 
   return (
     isVisible && (
