@@ -1,4 +1,5 @@
 import styles from "./Contacts.module.scss";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 import Section from "components/common/Section";
 
@@ -26,7 +27,13 @@ export default function Contacts() {
             ))}
           </ul>
         </div>
-        <div className={styles.image} />
+        <AnimationOnScroll
+          animateIn="animate__heartBeat animate__slower"
+          initiallyVisible
+          animateOnce
+        >
+          <div className={styles.image} />
+        </AnimationOnScroll>
       </div>
     </Section>
   );

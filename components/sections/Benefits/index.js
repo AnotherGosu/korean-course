@@ -1,4 +1,5 @@
 import styles from "./Benefits.module.scss";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 import Section from "components/common/Section";
 
@@ -9,7 +10,13 @@ export default function Benefits() {
     <Section heading="Особенности курса" id="benefits">
       <div className={styles.container}>
         {benefits.map((props) => (
-          <Card key={props.heading} {...props} />
+          <AnimationOnScroll
+            animateIn="animate__fadeInUp"
+            key={props.heading}
+            animateOnce
+          >
+            <Card {...props} />
+          </AnimationOnScroll>
         ))}
       </div>
     </Section>

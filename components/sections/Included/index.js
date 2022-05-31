@@ -1,4 +1,5 @@
 import styles from "./Included.module.scss";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 import Section from "components/common/Section";
 
@@ -9,7 +10,9 @@ export default function Included() {
     <Section heading="Что включено в курс" id="included">
       <div className={styles.container}>
         <List items={includedItems} style={{ gap: "25px" }} />
-        <div className={styles.image} />
+        <AnimationOnScroll animateIn="animate__rotateInDownRight" animateOnce>
+          <div className={styles.image} />
+        </AnimationOnScroll>
       </div>
     </Section>
   );

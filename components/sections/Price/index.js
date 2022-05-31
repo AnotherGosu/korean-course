@@ -1,4 +1,5 @@
 import styles from "./Price.module.scss";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 import Section from "components/common/Section";
 
@@ -8,7 +9,13 @@ export default function Price() {
       <div className={styles.container}>
         <div className={styles.image} />
         <div className={styles.text}>
-          <span className={styles.value}>3$</span>
+          <AnimationOnScroll
+            animateIn="animate__shakeY"
+            animateOnce
+            initiallyVisible
+          >
+            <span className={styles.value}>3$</span>
+          </AnimationOnScroll>
           <p>1 урок = 1 чашка кофе</p>
           <p>Кофе закочится, знания остануться</p>
         </div>

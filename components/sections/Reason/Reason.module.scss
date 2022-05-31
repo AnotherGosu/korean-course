@@ -3,53 +3,23 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 50px;
-}
-
-.subsectionTop {
-  display: grid;
-  grid-template-columns: 275px 1fr;
   gap: 20px;
-
-  @include sm {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
 }
 
-.imageTop,
-.imageBottom {
+.image {
   width: 100%;
   height: 250px;
+  background-image: url("/meditating.svg");
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
 
   @include bg {
     height: 200px;
   }
 }
 
-.imageTop {
-  background-image: url("/reading.svg");
-}
-
-.imageBottom {
-  background-image: url("/meditating.svg");
-  background-position: center;
-}
-
-.troubles {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.subsectionBottom {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
+.centeredText {
   text-align: center;
+  margin-top: 30px;
 }

@@ -1,22 +1,29 @@
 @import "styles/breakpoints.scss";
 
 .container {
-  padding: 30px 50px 80px 50px;
-  display: flex;
-  flex-direction: column;
+  padding: 30px 50px 0 50px;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 2fr 1fr;
   align-items: center;
-  gap: 40px;
+  justify-items: center;
 
   @include sm {
-    padding: 30px 15px 80px 15px;
+    padding: 30px 15px 0 15px;
   }
 }
 
 .polaroidWrapper {
-  width: 470px;
+  width: 400px;
+  max-width: 400px;
 
   @include sm {
     width: 100%;
+  }
+
+  @media (max-height: 680px) {
+    width: 250px;
   }
 }
 
@@ -28,6 +35,10 @@
   @include sm {
     font-size: 40px;
   }
+
+  @media (max-height: 680px) {
+    font-size: 35px;
+  }
 }
 
 .heading {
@@ -36,18 +47,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
   gap: 20px;
   font-size: 24px;
   font-weight: 500;
   text-align: center;
-  word-spacing: 7px;
+  word-spacing: 5px;
 
   @include bg {
     font-size: 22px;
   }
 
   @include sm {
+    margin-top: 10px;
+    gap: 10px;
     font-size: 20px;
   }
 }
@@ -64,4 +76,8 @@
     width: 50px;
     height: 50px;
   }
+}
+
+.headingRows {
+  line-height: 1.7;
 }

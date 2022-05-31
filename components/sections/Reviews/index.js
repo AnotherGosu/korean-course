@@ -1,12 +1,14 @@
 import styles from "./Reviews.module.scss";
 import { useState } from "react";
+import { useWindowSize } from "hooks";
 import Image from "next/image";
 
 import Section from "components/common/Section";
-import Polaroid from "components/common/Polaroid";
 
 export default function Reviews() {
   const [currentImage, setCurrentImage] = useState(0);
+  const { width } = useWindowSize();
+  const imageOffset = width > 620 ? 500 : 300;
 
   const onPrevImage = () => {
     setCurrentImage(currentImage - 1);
@@ -29,7 +31,7 @@ export default function Reviews() {
             <div
               key={url}
               className={styles.image}
-              style={{ right: `${500 * (currentImage - idx)}px` }}
+              style={{ right: `${imageOffset * (currentImage - idx)}px` }}
             >
               <Image
                 src={url}

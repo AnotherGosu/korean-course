@@ -5,7 +5,7 @@ import Polaroid from "components/common/Polaroid";
 
 export default function Join() {
   const onJoinButtonClick = () => {
-    const url = "https://t.me/+VqW2TIN42rewekrP";
+    const url = "https://www.instagram.com/maryoonseul/";
     const newWindow = window.open(url, "_blank", "noopener,noreferrer");
     if (newWindow) newWindow.opener = null;
   };

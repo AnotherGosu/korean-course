@@ -1,4 +1,5 @@
 import styles from "./Audience.module.scss";
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 import Section from "components/common/Section";
 import Card from "components/common/Card";
@@ -8,7 +9,13 @@ export default function Audience() {
     <Section heading="Для кого этот курс" id="audience">
       <div className={styles.container}>
         {levels.map((level) => (
-          <Card key={level.heading} {...level} />
+          <AnimationOnScroll
+            animateIn="animate__fadeInUp"
+            key={level.heading}
+            animateOnce
+          >
+            <Card {...level} />
+          </AnimationOnScroll>
         ))}
       </div>
     </Section>

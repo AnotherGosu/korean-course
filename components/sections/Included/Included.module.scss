@@ -2,18 +2,17 @@
 
 .container {
   width: 100%;
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
   @include sm {
+    display: flex;
     flex-direction: column;
-    align-items: baseline;
   }
 }
 
 .image {
   width: 100%;
-  max-width: 350px;
   height: 250px;
   background-position: center;
   background-repeat: no-repeat;
