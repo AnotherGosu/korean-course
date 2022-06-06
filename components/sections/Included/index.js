@@ -2,14 +2,17 @@ import styles from "./Included.module.scss";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
 import Section from "components/common/Section";
-
-import List from "components/common/List";
+import Option from "components/common/Option";
 
 export default function Included() {
   return (
     <Section heading="Что включено в курс" id="included">
       <div className={styles.container}>
-        <List items={includedItems} style={{ gap: "25px" }} />
+        <ul className={styles.list}>
+          {includedItems.map((item) => (
+            <Option key={item}>{item}</Option>
+          ))}
+        </ul>
         <AnimationOnScroll animateIn="animate__rotateInDownRight" animateOnce>
           <div className={styles.image} />
         </AnimationOnScroll>
@@ -23,6 +26,6 @@ const includedItems = [
   "Постоянный доступ к материалам",
   "Оперативная обратная связь",
   "Видеозаписи всех уроков",
-  "Полный словарь базовых фраз",
+  "Словарь базовых фраз",
   "Подборка материалов для практики вне урока",
 ];

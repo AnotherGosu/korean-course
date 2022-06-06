@@ -16,6 +16,11 @@
 }
 
 @mixin mobileImage {
+  @media (max-width: 675px) {
+    width: 400px;
+    height: 400px;
+  }
+
   @include sm {
     width: 300px;
     height: 300px;

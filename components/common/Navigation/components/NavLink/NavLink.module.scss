@@ -1,7 +1,7 @@
 @import "styles/breakpoints.scss";
 
 .link {
-  padding: 10px 10px;
+  padding: 15px;
   width: 175px;
   display: flex;
   align-items: center;
@@ -9,11 +9,15 @@
   border-radius: 20px;
   background-color: var(--color-secondary);
   font-size: 16px;
-  font-family: "Playfair Display", serif;
+  font-family: "Bitter", serif;
   font-weight: 500;
   color: var(--color-headline);
   cursor: pointer;
   transition: 0.4s ease;
+
+  @include sm {
+    padding: 10px;
+  }
 
   &:hover {
     background-color: var(--color-highlight);

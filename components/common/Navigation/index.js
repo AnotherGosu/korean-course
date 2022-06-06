@@ -42,7 +42,7 @@ const navLinks = [
   },
   {
     navLinkTitle: "Для кого этот курс",
-    navLinkId: "audience",
+    navLinkId: "levels",
   },
   {
     navLinkTitle: "Стоимость",
@@ -57,7 +57,7 @@ const navLinks = [
     navLinkId: "reviews",
   },
   {
-    navLinkTitle: "Обратная связь",
+    navLinkTitle: "Контакты",
     navLinkId: "contacts",
     isLastLink: true,
   },

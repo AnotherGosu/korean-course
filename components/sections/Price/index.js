@@ -8,16 +8,19 @@ export default function Price() {
     <Section heading="Стоимость курса" id="price">
       <div className={styles.container}>
         <div className={styles.image} />
-        <div className={styles.text}>
-          <AnimationOnScroll
-            animateIn="animate__shakeY"
-            animateOnce
-            initiallyVisible
-          >
-            <span className={styles.value}>3$</span>
-          </AnimationOnScroll>
-          <p>1 урок = 1 чашка кофе</p>
-          <p>Кофе закочится, знания остануться</p>
+        <div className={styles.textWrapper}>
+          <div className={styles.valueWrapper}>
+            <span>Урок = </span>
+            <AnimationOnScroll
+              animateIn="animate__shakeY"
+              animateOnce
+              initiallyVisible
+            >
+              <span className={styles.value}>3$</span>
+            </AnimationOnScroll>
+            <span>= Чашка кофе</span>
+          </div>
+          <p>Кофе закончится, знания останутся</p>
         </div>
       </div>
     </Section>

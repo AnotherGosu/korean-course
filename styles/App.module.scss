@@ -8,10 +8,6 @@
   display: grid;
   grid-template-columns: 1fr 900px 1fr;
 
-  @include bg {
-    grid-template-columns: 1fr 650px 1fr;
-  }
-
   @include md {
     grid-template-columns: 1fr;
   }

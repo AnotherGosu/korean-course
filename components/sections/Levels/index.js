@@ -1,12 +1,12 @@
-import styles from "./Audience.module.scss";
+import styles from "./Levels.module.scss";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 
 import Section from "components/common/Section";
 import Card from "components/common/Card";
 
-export default function Audience() {
+export default function Levels() {
   return (
-    <Section heading="Для кого этот курс" id="audience">
+    <Section heading="Для кого этот курс" id="levels">
       <div className={styles.container}>
         {levels.map((level) => (
           <AnimationOnScroll

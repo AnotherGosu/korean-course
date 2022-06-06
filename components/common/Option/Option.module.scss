@@ -1,0 +1,38 @@
+@import "styles/breakpoints.scss";
+
+@mixin option {
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  background-color: var(--color-secondary);
+  border: 1px solid;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  transition: 0.4s ease;
+
+  @include md {
+    max-width: 500px;
+  }
+
+  @include sm {
+    font-size: 18px;
+  }
+
+  &:hover {
+    box-shadow: var(--shadow-hover);
+  }
+}
+
+.optionRed {
+  @include option;
+  border-color: #ef0107;
+}
+
+.optionGreen {
+  @include option;
+  border-color: #32de84;
+}
