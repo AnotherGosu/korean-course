@@ -19,7 +19,7 @@ export default function App() {
   return (
     <>
       <Head>
-        <title>Maryoonseul</title>
+        <title>Korean Course</title>
         <meta name="description" content="Курс корейского языка" />
         <link rel="icon" href="/flag.png" />
       </Head>

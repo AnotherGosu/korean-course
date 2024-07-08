@@ -15,7 +15,7 @@ export default function Home() {
       </div>
       <div className={styles.ellipseWrapper}>
         <div className={styles.icon} />
-        <span className={styles.name}>Maryoonseul</span>
+        <span className={styles.name}>Korean Course</span>
         <h1 className={styles.heading}>Курс корейского языка</h1>
       </div>
     </section>
