@@ -3,11 +3,11 @@ import styles from "./Footer.module.scss";
 export default function Footer() {
   return (
     <div className={styles.container}>
-      <span className={styles.title}>Maryoonseul</span>
+      <span className={styles.title}>Korean Course</span>
       <p className={styles.subtitle}>Курс корейского языка</p>
       <a
         className={styles.link}
-        href="https://www.upwork.com/freelancers/~0105b4e3e72b6f1c26"
+        href="https://github.com/AnotherGosu"
         target="_blank"
         rel="noreferrer"
       >
